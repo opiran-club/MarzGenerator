@@ -1,44 +1,109 @@
+Skip to content
+Navigation Menu
+azavaxhuman
+/
+MarzbanInboundGenerator
+
+Type / to search
+Code
+Issues
+3
+Pull requests
+Actions
+Projects
+Security
+Insights
+Files
+Go to file
+t
+v2
+.gitattributes
+.gitignore
+LICENSE
+Preview.png
+README.md
+ico.ico
+index.html
+init
+logo.png
+script.js
+style.css
+.gitattributes
+.gitignore
+LICENSE
+Preview.png
+README.md
+ico.ico
+index.html
+logo.png
+script.js
+style.css
+BreadcrumbsMarzbanInboundGenerator/v2
+/style.css
+Latest commit
+azavaxhuman
+azavaxhuman
+Update style.css
+6ac81ce
+ · 
+8 hours ago
+History
+BreadcrumbsMarzbanInboundGenerator/v2
+/style.css
+File metadata and controls
+
+Code
+
+Blame
+373 lines (298 loc) · 5.67 KB
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #1a202c;
-    color: #e2e8f0; /* Light text color for better readability */
+    background-color: #1a1a1a;
+    height: auto;
     padding-bottom: 80px;
     scale: 0.9;
 }
 
 #topcontents {
+    margin-top: 0px;
     display: flex;
-    justify-content: center;
     width: 100%;
-    margin: 0;
+    justify-content: center;
 }
 
 #bodypard {
+
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
 #content {
+
     margin-top: 30px;
     padding: 40px;
+    margin-bottom: -30px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 320px; /* Slightly wider for better spacing */
+    box-shadow: 2px 2px 20px #24242448;
+    width: 300px;
     background-color: #2d3748;
     z-index: 1;
     height: auto;
 }
 
 #ctext {
+
     z-index: 0;
     border-radius: 6px;
     margin-right: -70px;
     margin-top: 50px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #24242448;
     width: 800px;
     background-color: #749aec;
+    height: auto;
+
 }
 
 label {
@@ -49,53 +114,66 @@ label {
     margin-top: 15px;
 }
 
+
+
 input,
 select {
     width: 100%;
-    padding: 8px 12px; /* Added more padding for better touch interaction */
+    padding: 6px 12px;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
     height: 40px;
-    font-size: 16px; /* Larger font size for better readability */
-    font-weight: 500;
-    background-color: #2d3748; /* Matching background color */
-    color: #e2e8f0; /* Light text color for readability */
+    font-size: medium;
+    font-weight: 700;
+    direction: ltr;
+
 }
 
 input:focus,
 select:focus {
     outline: none;
     box-shadow: 0 0 12px #749aec;
+
 }
 
 #sarbarg {
-    display: flex;
     justify-content: center;
+    display: flex;
     align-items: center;
-}
-
-#addFieldsButton,
-#removeFieldsButton {
-    align-items: center;
-    width: 130px;
-    padding: 8px 12px;
-    border-radius: 20px;
-    height: 35px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 #addFieldsButton {
+    align-items: center;
     background-color: #00b894;
+    width: 130px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    height: 35px;
+    font-size: small;
+    font-weight: 600;
+    direction: ltr;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border: none !important;
+
 }
 
 #removeFieldsButton {
+    align-items: center;
     background-color: #b82b00;
+    width: 160px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    height: 35px;
+    font-size: small;
+    font-weight: 600;
+    direction: ltr;
+    color: #ffffff;
+    margin-top: 5px;
+    border: none !important;
 }
+
+
 
 input[type="button"]:hover {
     background-color: rgb(106, 154, 245);
@@ -123,8 +201,8 @@ input[type="button"]:hover {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 26px;
+    transition: .4s;
+    border-radius: 34px;
 }
 
 .slider:before {
@@ -135,78 +213,109 @@ input[type="button"]:hover {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: 0.4s;
+    transition: .4s;
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #00b894;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #749aec;
 }
 
-input:checked + .slider:before {
-    transform: translateX(24px); /* Adjusted for a better visual effect */
+input:checked+.slider:before {
+    transform: translateX(26px);
 }
 
 textarea {
-    width: 90%;
-    height: 200px; /* Fixed height for better layout */
-    background-color: #2d3748; /* Consistent background color */
-    color: #e2e8f0;
+    width: 90% !Important;
+
+    direction: ltr;
+    height: 90%;
+    background-color: transparent;
+    color: #1a202c;
     font-size: 16px;
     font-weight: 300;
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
-    resize: vertical; /* Allow vertical resizing */
+    border-color: transparent;
+
+
 }
 
-#sutton,
-#youtube,
-#github,
-#github1,
-#random,
-#Keycopy,
-#shortidcopy,
-#randomport {
-    display: inline-block;
+#sutton {
+
+    margin-top: 30px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#youtube {
+    margin-top: 20px;
+    width: auto;
+
+    background-color: rgb(255, 36, 36);
     border: none;
     border-radius: 7px;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 14px;
+    transition: 0.3s;
+    font-size: small;
     font-weight: 600;
     height: 40px;
-    padding: 10px 20px;
-    margin-top: 20px;
+
 }
 
-#sutton {
-    background-color: cornflowerblue;
-    width: 300px;
+#random,#Keycopy,#shortidcopy {
+
+    margin-top: 5px;
+    border-color: transparent;
+    height: 30px;
+    font-weight: 600 !Important;
+    font-size: 12px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #11e999;
+
 }
 
-#youtube {
-    background-color: rgb(255, 36, 36);
+#randomport {
+
+    margin-top: 5px;
+    border-color: transparent;
+    height: 30px;
+    font-weight: 600 !Important;
+    font-size: 12px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #e9a511;
+
 }
 
 #github,
 #github1 {
+    width: auto;
+
     background-color: rgb(48, 48, 48);
-}
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: small;
+    font-weight: 600;
+    height: 40px;
 
-#random,
-#Keycopy,
-#shortidcopy,
-#randomport {
-    background-color: #11e999;
-}
-
-#randomport {
-    background-color: #e9a511;
 }
 
 #inboundname,
@@ -222,28 +331,38 @@ textarea {
 #PublicKey,
 #path,
 #wsheaderfield {
-    margin: 0;
-    height: 40px; /* Consistent height for form fields */
-    width: calc(100% - 12px); /* Adjust width to fit padding */
-    border-radius: 6px;
+    margin: 0px 0px 0px 0px;
+    height: 20px;
+    width: -webkit-fill-available;
+    border-radius: 15px;
     font-weight: 500;
-    padding: 0 8px; /* Padding for better text input */
+
 }
 
+
+
 .field {
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
+    height: 20px;
+    width: -webkit-fill-available;
+    border-radius: 15px;
+    font-weight: 500;
 }
 
 #acceptProxyProtocols,
 #headerOnOffDiv {
     margin-top: 10px;
+    direction: ltr;
     font-size: large;
     display: flex;
     align-items: center;
+    display: -webkit-inline-box";
+
 }
 
 #protocolDetails {
     margin-top: 30px;
+    direction: ltr;
 }
 
 hr {
@@ -254,7 +373,12 @@ hr {
 }
 
 p {
-    margin: 0 0 1em 0;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
 }
 
 .line-numbers {
@@ -267,30 +391,42 @@ p {
 }
 
 .line-numbers p::before {
+
+
     counter-increment: line;
     display: inline-block;
     width: 20px;
     text-align: right;
 }
 
+
 .group-checkbox {
     width: 25px;
     height: 25px;
     appearance: auto;
+
     background-color: #ffffff;
+    box-shadow: none !Important;
     cursor: pointer;
+
 }
 
 #trtable {
     color: white;
     font-weight: 600;
     font-size: medium;
-}
 
-#sniffingDiv {
+
+
+}
+#sniffingDiv  {
     margin-top: 20px;
+
 }
 
-#sniffingDiv input:checked + .slider {
+#sniffingDiv input:checked+.slider {
     background-color: #30d806;
+
+
 }
+MarzbanInboundGenerator/v2/style.css at main · azavaxhuman/MarzbanInboundGenerator 
